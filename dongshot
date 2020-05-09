@@ -45,12 +45,15 @@ fi
 # shellcheck disable=SC1090
 . "$config"
 
-if ! type import &>/dev/null; then
-  printf "%s\n" "'import' not found in \$PATH"
-  exit 127
+if type screencapture &>/dev/null; then
+  screencapture "$file"
+else
+  if ! type import &>/dev/null; then
+    printf "%s\n" "'import' not found in \$PATH"
+    exit 127
+  fi
+  import "$file"
 fi
-
-import "$file"
 
 if type optipng &>/dev/null; then
   optipng "$file" &>/dev/null
@@ -82,7 +85,9 @@ fi
 
 printf "%s\n" "$url"
 
-if type xclip &>/dev/null; then
+if type pbcopy &>/dev/null; then
+  printf "%s" "$url" | pbcopy
+elif type xclip &>/dev/null; then
   printf "%s" "$url" | xclip -i -selection clipboard
 elif type xsel &>/dev/null; then
   printf "%s" "$url" | xsel -ib
