@@ -1,6 +1,8 @@
-# Jellyshot [![Build Status](https://travis-ci.org/jelly/jellyshot.svg?branch=master)](https://travis-ci.org/jelly/jellyshot)
+# Dongshot
 
-The amazing screenshot random name generator and uploader!
+The amazing screenshot random name generator and uploader, with dongs!
+
+(Sorry Jelle, blame Alyptik.)
 
 ## Dependencies
 
@@ -16,6 +18,6 @@ USERNAME / SERVER, see config.example as an example config.
 ## Usage
 
 ```
-$ ./jellyshot
-$  https://domain.com/~jelle/dump/AmazingBlackReindeer.png
+$ ./dongshot
+$  https://domain.com/~beest/dump/AmazingBlackReindeerDong.png
 ```
