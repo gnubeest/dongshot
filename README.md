@@ -6,9 +6,14 @@ The amazing screenshot random name generator and uploader, with dongs!
 
 ## Dependencies
 
-* imagemagick
+macOS:
 * optipng (optional compression of screenshot)
+
+Linux:
+* imagemagick
 * ssh (for scp)
+* optipng (optional compression of screenshot)
+* xclip/xsel (optional copying of URL to clipboard)
 
 ## Config
 
